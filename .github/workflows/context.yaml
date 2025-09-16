@@ -1,0 +1,20 @@
+name: Triggers and valiables
+on: push
+
+env: 
+  OWNER: ${{github.repository_owner}}
+  REF: ${{github.ref}}
+  ACTOR: ${{github.actor}}
+
+jobs: 
+    file-pushed:
+      runs-on: ubuntu-latest
+      steps: 
+        - name: context testing 16.09.25
+          run: |
+            touch info.txt
+            echo $OWNER >> info.txt
+            echo $REF >> info.txt
+            echo $ACTORO >> info.txt
+            cat info.txt
+          
