@@ -9,5 +9,5 @@ jobs:
       steps: 
         - name: context testing 16.09.25
           run: |
-            echo "ID is ${{github.event.id}}"
-            echo "Title is ${{github.event.title}}"
+            echo "ID is ${{github.issue.id}}"
+            echo "Title is ${{github.issue.title}}"
