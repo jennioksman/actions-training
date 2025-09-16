@@ -1,5 +1,7 @@
 name: Triggers and valiables
-on: push
+on: 
+  push:
+    branches-ignore: main
 
 env: 
   OWNER: ${{github.repository_owner}}
