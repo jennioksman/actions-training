@@ -1,0 +1,13 @@
+name: Task2
+on: 
+  issues:
+    types: [opened]
+
+jobs: 
+    file-pushed:
+      runs-on: ubuntu-latest
+      steps: 
+        - name: context testing 16.09.25
+          run: |
+            echo "ID is ${{github.event.id}}"
+            echo "Title is ${{github.event.title}}"
